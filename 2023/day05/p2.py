@@ -26,7 +26,6 @@ for line in lines:
 			l2, r2 = cur[i + 1]
 			if r1 + 1 <= l2 - 1:
 				lis.append([r1 + 1, l2 - 1])
-
 	num = lis
 
 print(min([l for l, r in num]))
