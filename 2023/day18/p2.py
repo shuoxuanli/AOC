@@ -2,9 +2,9 @@ import sys
 
 lines = sys.stdin.read().split("\n")
 
-p = 0
-x, y = 0, 0
 pt = [(x, y)]
+p, x, y = 0, 0, 0
+
 for line in lines:
 	a, b, c = line.split()
 	b = int(c[2 : -2], 16)
