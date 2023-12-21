@@ -4,11 +4,7 @@ g = sys.stdin.read().split("\n")
 
 n, m = len(g), len(g[0])
 
-x, y = 0, 0
-for i in range(n):
-	for j in range(m):
-		if g[i][j] == 'S':
-			x, y = i, j
+x, y = next((i, j) for i, a in enumerate(g) for j, b in enumerate(a) if b == 'S')
 
 adj = dict()
 adj['F'] = [(1, 0), (0, 1)]
