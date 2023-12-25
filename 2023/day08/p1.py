@@ -8,8 +8,8 @@ cur = "AAA"
 p, ans = 0, 0
 
 while cur != "ZZZ":
-	cur = maps[cur][dir[p] == 'R']
-	ans += 1
-	p = (p + 1) % len(dir)
+    cur = maps[cur][dir[p] == 'R']
+    ans += 1
+    p = (p + 1) % len(dir)
 
 print(ans)
