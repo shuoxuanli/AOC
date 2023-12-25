@@ -10,7 +10,7 @@ sb = int(''.join(map(str, b)))
 
 ans = 0
 for i in range(sa + 1):
-	if i * (sa - i) > sb:
-		ans += 1
+    if i * (sa - i) > sb:
+        ans += 1
 
 print(ans)
