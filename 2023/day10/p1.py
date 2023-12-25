@@ -24,7 +24,7 @@ while q != []:
     r, c = q.pop(0)
     for dr, dc in adj[g[r][c]]:
         nr, nc = r + dr, c + dc
-        if nr >= 0 and nr < n and nc >= 0 and nc < m:
+        if 0 <= nr < n and 0 <= nc < m:
             if g[nr][nc] != '.' and (-dr, -dc) in adj[g[nr][nc]] and d[nr][nc] == -1:
                 d[nr][nc] = d[r][c] + 1
                 q.append((nr, nc))
