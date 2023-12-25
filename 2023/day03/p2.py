@@ -26,7 +26,6 @@ for i in range(n):
                         r, x, y, z = s[p]
                         if r == i + k and x <= j + l <= y and p not in lis:
                             lis.append(p)
-
             if len(lis) == 2: ans += s[lis[0]][3] * s[lis[1]][3]
 
 print(ans)
