@@ -21,12 +21,12 @@ d = [[-1 for j in range(m)] for i in range(n)]
 d[x][y] = 0
 q.append((x, y))
 while q != []:
-	r, c = q.pop(0)
-	for dr, dc in adj[g[r][c]]:
-		nr, nc = r + dr, c + dc
-		if nr >= 0 and nr < n and nc >= 0 and nc < m:
-			if g[nr][nc] != '.' and (-dr, -dc) in adj[g[nr][nc]] and d[nr][nc] == -1:
-				d[nr][nc] = d[r][c] + 1
-				q.append((nr, nc))
+    r, c = q.pop(0)
+    for dr, dc in adj[g[r][c]]:
+        nr, nc = r + dr, c + dc
+        if nr >= 0 and nr < n and nc >= 0 and nc < m:
+            if g[nr][nc] != '.' and (-dr, -dc) in adj[g[nr][nc]] and d[nr][nc] == -1:
+                d[nr][nc] = d[r][c] + 1
+                q.append((nr, nc))
 
 print(max(map(max, d)))
